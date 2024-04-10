@@ -8,7 +8,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 with open("evil2.gfx", "br") as f:
     data = f.read()
-    
+
 images = []
 for i in range(5):
     with open(f"{i}.png", "wb") as f:
@@ -22,7 +22,7 @@ for i in range(5):
             os.remove(f"{i}.png")
 
 width, height = max(img.size for img in images)
-combined_image = Image.new("RGB", (width*5, height))
+combined_image = Image.new("RGB", (width * 5, height))
 
 for i, img in enumerate(images):
     combined_image.paste(img, (i * width, 0))

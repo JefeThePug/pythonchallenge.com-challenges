@@ -5,7 +5,7 @@ import numpy as np
 
 image = Image.open("mozart.gif")
 width, height = image.size
-bar = [i for i, x in enumerate(image.histogram()) if x != 0 and not x%height][0]
+bar = [i for i, x in enumerate(image.histogram()) if x != 0 and not x % height][0]
 
 for y in range(height):
     crop = 0, y, width, y + 1

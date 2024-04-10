@@ -4,12 +4,14 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
+
 def is_leap_year(year):
     try:
         datetime.date(year, 2, 29)
         return datetime.date(year, 1, 1).weekday() == 3
     except ValueError:
         return False
+
 
 year = [year for year in range(1006, 2000, 10) if is_leap_year(year)][-2]
 print(f"January 27, {year}")

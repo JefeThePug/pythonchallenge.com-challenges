@@ -9,12 +9,12 @@ pixels = [*img.getdata()]
 
 i = 0
 while pixels:
-    for y in range((i+3)//4, (w-1)-(i+1)//4 + 1):
-        result.putpixel((i//4, y), pixels.pop(0))
+    for y in range((i + 3) // 4, (w - 1) - (i + 1) // 4 + 1):
+        result.putpixel((i // 4, y), pixels.pop(0))
     i += 1
     result = result.rotate(-90)
-    
-result = result.rotate(180).resize((500,500))
+
+result = result.rotate(180).resize((500, 500))
 
 result.save("challenge_14_output.png")
 
