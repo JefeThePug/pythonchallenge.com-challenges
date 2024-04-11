@@ -29,10 +29,6 @@ headers["Range"] = f"bytes={int(s) - 1}-"
 f = requests.get(url, headers=headers)
 print(f.text)
 
-num = re.search(r"\d+", f.text).group()
-headers["Range"] = f"bytes={num}-"
-f = requests.get(url, headers=headers)
-
 ##################################################
 # OUTPUT:                                        #
 #                                                #

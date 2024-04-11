@@ -1,6 +1,7 @@
 # Challenge 6
 
 import zipfile
+import re
 
 f = zipfile.ZipFile("channel.zip")
 num = "90052"
